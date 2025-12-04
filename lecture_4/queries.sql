@@ -87,7 +87,7 @@ SELECT subject, AVG(grade) AS average_grade
 FROM grades
 GROUP BY subject;
 
--- Top 3 students by average grade
+-- Top 3 students by average grades
 SELECT students.full_name, AVG(grades.grade) AS avg_grade
 FROM grades
 JOIN students ON students.id = grades.student_id
