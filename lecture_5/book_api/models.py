@@ -1,13 +1,10 @@
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import declarative_base
+from .database import Base
 
-Base = declarative_base
-
-class book (Base):
+class Book(Base):
     __tablename__ = "books"
 
-    id = Column(Integer, primary_key = True, index = True)
-    title = Column(String, nulllable = False)
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String, nullable=False)   # у тебя был typo: nulllable
     author = Column(String, nullable=False)
     year = Column(Integer, nullable=True)
-
